@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500&display=swap");
+
+:root {
+	--ff-primary: "Merriweather", serif;
+	--ff-secondary: "Poppins", sans-serif;
+
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-bold: 700;
+
+	--fs-20: 1.25rem;
+	--fs-24: 1.5em;
+	--fs-32: 2rem;
+
+	--br-10: 0.6em;
+
+	--clr-light-cyan: #aef1f5;
+	--clr-dark-blue: #141843;
+	--clr-slate-blue: #5f627a;
+
+	--clr-peach: #ffddb6;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	color: var(--clr-dark-blue);
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--ff-primary);
+	font-weight: var(--fw-regular);
+	min-height: 100vh;
+
+	background-image: linear-gradient(to bottom right, #ffddb6, #c6fcff, #edbbff);
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+/* ==== CARD ==== */
+.card {
+	
+	/* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+	border-radius: 1.88em;
+	display: flex;
+    backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.3);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	gap: 2.5em;
+	max-width: 1098px;
+	padding: 2.63em 2.31em 5.44em 7.56em;
+	margin: 0 auto;
+}
+
+.card__title {
+	font-size: var(--fs-32);
+	font-family: var(--ff-secondary);
+	margin: 0 0 0.125em;
+}
+
+.card__job {
+	color: var(--clr-slate-blue);
+	font-size: var(--fs-24);
+	margin: 0 0 0.71em;
+}
+
+.card__description {
+	font-size: var(--fs-24);
+	margin: 0 0 1.54em;
+}
+
+/* ==== CARD SOCIALS ==== */
+.card__social {
+	margin: 0 0 2.69em;
+}
+
+.row {
+	display: flex;
+}
+
+.col:not(:last-child) {
+	border-right: 1px solid var(--clr-dark-blue);
+}
+
+.col h3 {
+	font-size: var(--fs-20);
+	text-align: center;
+}
+
+.col:first-of-type h3 {
+	padding-right: 2.25em;
+}
+
+.col:nth-of-type(2) h3 {
+	padding: 0 2.25em;
+}
+
+.col:last-of-type h3 {
+	padding-left: 2.25em;
+}
+
+.display-block {
+	display: block;
+}
+
+/* ==== BUTTON CONTAINER === */
+.btn {
+	color: inherit;
+	border-radius: var(--br-10);
+	font-size: var(--fs-20);
+	padding: 1.3em 2.5em;
+}
+
+.btn--blue {
+	background: var(--clr-light-cyan);
+	margin-right: 1.2em;
+}
+
+.btn--peach {
+	background: var(--clr-peach);
+}
+
+.btn:is(:focus, :hover) {
+	opacity: 0.75;
+}
